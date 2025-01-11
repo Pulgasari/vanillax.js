@@ -26,6 +26,14 @@ HTMLElement.prototype.removeDataset = function( property ){
   this.removeAttribute( 'data-' + property );
   return this;
 };
+HTMLElement.prototype.removeDatasets = function( properties ){
+  properties = Array.isArray(properties) ? properties : properties.split(' ');
+  properties.forEach( property => {
+    this.removeAttribute( 'data-' + property );
+  }
+  return this;
+};
+
 
 // Classes
 HTMLElement.prototype.getClasses = function(){
@@ -39,7 +47,8 @@ HTMLElement.prototype.removeClass = function( name ){
   this.classList.remove(name);
   return this;
 };
-HTMLElement.prototype.removeClass = function( names ){
+HTMLElement.prototype.removeClasses = function( names ){
+  names = Array.isArray(names) ? names : names.split(' ');
   names.forEach( name => {
     this.classList.remove(name);
   }
@@ -68,4 +77,12 @@ HTMLElement.prototype.replaceClass = function( a, b ){
   }
   return this;
 };
+HTMLElement.prototype.hasClass = function( name ){
+  return this.classList.contains(name);
+};
+HTMLElement.prototype.hasClasses = function( names ){
+  names = Array.isArray(names) ? names : names.split(' ');
+  return names.every( name => this.classList.contains(name) );
+};
+
 
