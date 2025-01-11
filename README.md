@@ -1,6 +1,10 @@
 # vanillax.js
 I do love Vanilla JS but I ended up using these style very often.
 
+## Chainability
+
+All methods are chainable. Except the get- and has-methods which return boolean (true or false).
+
 ## Get Element(s)
 
 Get Single Element
@@ -28,6 +32,18 @@ el.setDataset('position','right');
 Remove Dataset
 ```js
 el.removeDataset('position');
+```
+
+### Remove multiple Datasets
+
+by Array
+```js
+el.removeDatasets(['one','two','three']);
+```
+
+by String
+```js
+el.removeDatasets('one two three');
 ```
 
 ## Classes
