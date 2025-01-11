@@ -85,4 +85,26 @@ HTMLElement.prototype.hasClasses = function( names ){
   return names.every( name => this.classList.contains(name) );
 };
 
-
+// Styles
+HTMLElement.prototype.setStyle = function( property, value ){
+  this.style.setProperty(property,value);
+  return this;
+};
+HTMLElement.prototype.getStyle = function( property ){
+  if( property.startsWith('--') ){
+    const cs = window.getComputedStyle(this);
+    return cs.getPropertyValue(property);
+  }
+  return this.style[property];
+};
+HTMLElement.prototype.removeStyle = function( property ){
+  this.style.removeProperty(property);
+  return this;
+};
+HTMLElement.prototype.removeStyles = function( properties ){
+  properties = Array.isArray(properties) ? properties : properties.split(' ');
+  properties.forEach( property => {
+    this.style.removeProperty(property);
+  });
+  return this;
+};
