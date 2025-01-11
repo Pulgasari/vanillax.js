@@ -16,7 +16,7 @@ HTMLElement.prototype.getDataset = function( property ){
   return this.dataset[property];
 };
 HTMLElement.prototype.getDatasets = function(){
-  
+
 };
 HTMLElement.prototype.setDataset = function( property, value ){
   this.dataset[property] = value;
