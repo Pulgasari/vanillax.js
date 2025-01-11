@@ -7,7 +7,7 @@ function getElements (selector) { return document.querySelectorAll(selector); }
 HTMLElement.prototype.removeAttributes = function( properties ){
   properties.forEach( property => {
     this.removeAttribute(property);
-  }
+  });
   return this;
 };
 
@@ -30,7 +30,7 @@ HTMLElement.prototype.removeDatasets = function( properties ){
   properties = Array.isArray(properties) ? properties : properties.split(' ');
   properties.forEach( property => {
     this.removeAttribute( 'data-' + property );
-  }
+  });
   return this;
 };
 
@@ -51,7 +51,7 @@ HTMLElement.prototype.removeClasses = function( names ){
   names = Array.isArray(names) ? names : names.split(' ');
   names.forEach( name => {
     this.classList.remove(name);
-  }
+  });
   return this;
 };
 HTMLElement.prototype.toggleClass = function( name ){
