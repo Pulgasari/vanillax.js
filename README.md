@@ -29,3 +29,61 @@ Remove Dataset
 ```js
 el.removeDataset('position');
 ```
+
+## Classes
+
+Get all Classes of Element as Array
+```js
+el.getClasses();
+```
+
+Add Class to Element
+```js
+el.addClass('newclass');
+```
+
+Remove Class from Element
+```js
+el.removeClass('classname');
+```
+
+Remove multiple Classes from Element by Array
+```js
+el.removeClasses(['one','two','three']);
+```
+
+Remove multiple Classes from Element by String
+```js
+el.removeClasses('one two three');
+```
+
+Toggle Class of Element
+```js
+el.toggleClass('classname');
+```
+
+Switch Classes of Element
+```js
+el.switchClasses('class1','class2');
+```
+
+Replace Class of Element by another Class
+```js
+el.replaceClass('oldclass','newclass');
+```
+Check if Element has Class
+```js
+el.hasClass('classname');
+```
+
+Check if Element has multiple Classes by Array
+```js
+el.hasClasses(['one','two','three']);
+```
+
+Check if Element has multiple Classes by String
+```js
+el.hasClasses('one two three');
+```
+
+
