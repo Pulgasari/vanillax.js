@@ -4,43 +4,28 @@ I do love Vanilla JS but I ended up using these style very often.
 ## Get Element(s)
 
 Get Single Element
-```
+```js
 const el = getElement('#sidebar');
-
-Vanilla JS:
-const el = document.querySelector('#sidebar');
 ```
 
 Get Multiple Elements
-```
+```js
 const items = getElements('.items');
-
-Vanilla JS:
-const items = document.querySelectorAll('.items');
 ```
 
 ## Datasets / Data-Attributes
 
 Get Value of Dataset
-```
-const myValue = el.getDataset('position');
-
-Vanilla JS:
-const myValue = el.dataset['position'];
+```js
+const pos = el.getDataset('position');
 ```
 
 Set Value of Dataset
-```
-el.setDataset( 'position', 'right' );
-
-Vanilla JS:
-el.dataset['position'] = 'right';
+```js
+el.setDataset('position','right');
 ```
 
 Remove Dataset
-```
+```js
 el.removeDataset('position');
-
-Vanilla JS:
-el.removeAttribute('data-position');
 ```
