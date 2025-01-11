@@ -1,28 +1,46 @@
 # vanillax.js
-tiny library for lovers of vanilla js
+I do love Vanilla JS but I ended up using these style very often.
+
+## Get Element(s)
+
+Get Single Element
+```
+const el = getElement('#sidebar');
+
+Vanilla JS:
+const el = document.querySelector('#sidebar');
+```
+
+Get Multiple Elements
+```
+const items = getElements('.items');
+
+Vanilla JS:
+const items = document.querySelectorAll('.items');
+```
 
 ## Datasets / Data-Attributes
 
 Get Value of Dataset
 ```
-const myValue = Element('#sidebar').getDataset('position');
+const myValue = el.getDataset('position');
 
 Vanilla JS:
-const myValue = document.querySelector('#sidebar').dataset['position'];
+const myValue = el.dataset['position'];
 ```
 
 Set Value of Dataset
 ```
-Element('#sidebar').setDataset( 'position', 'right' );
+el.setDataset( 'position', 'right' );
 
 Vanilla JS:
-document.querySelector('#sidebar').dataset['position'] = 'right';
+el.dataset['position'] = 'right';
 ```
 
 Remove Dataset
 ```
-Element('#sidebar').removeDataset('position');
+el.removeDataset('position');
 
 Vanilla JS:
-document.querySelector('#sidebar').removeAttribute('data-position');
+el.removeAttribute('data-position');
 ```
